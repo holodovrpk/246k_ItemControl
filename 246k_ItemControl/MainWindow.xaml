@@ -8,19 +8,34 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <ScrollViewer Height="350">
-            <ItemsControl x:Name="ProductList" Background="Bisque">
+            <ItemsControl x:Name="ProductList" Background="Azure">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+
+
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Background="Aqua" Margin="15">
-                            <TextBlock Text="{Binding Name}" FontSize="22" FontWeight="Bold" Width="350"/>
-                            <Image Source="{Binding Cover}" Height="150"/>
-                            <TextBlock Text="{Binding Price}" FontSize="22" Foreground="Red" />
-                            <TextBlock Text=" руб." FontSize="22" Foreground="Red" Width="250"/>
-                            <TextBlock Text="Рейтинг: " FontSize="22" Foreground="Blue" />
-                            <TextBlock Text="{Binding Rating}" FontSize="22" Foreground="Blue"/>
+                        <StackPanel Background="Beige" Margin="15" Height="220" Width="160">
+                            <TextBlock Text="{Binding Name}" FontSize="22" FontWeight="Bold" TextAlignment="Center"/>
+                            <Image Source="{Binding Cover}" Height="130" Width="130"/>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Цена: " FontSize="22" Foreground="Red"/>
+                                <TextBlock Text="{Binding Price}" FontSize="22" Foreground="Red" />
+                                <TextBlock Text=" руб." FontSize="22" Foreground="Red"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="Рейтинг: " FontSize="18" Foreground="Blue" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Rating}" FontSize="18" Foreground="Blue" FontWeight="Bold"/>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
+                
+                
             </ItemsControl>
         </ScrollViewer>
         
