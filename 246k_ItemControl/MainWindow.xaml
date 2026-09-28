@@ -8,11 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <ScrollViewer Height="350">
-            <ItemsControl x:Name="ProductList"  Background="Bisque">
+            <ItemsControl x:Name="ProductList" Background="Bisque">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Background="Aqua" Margin="15">
                             <TextBlock Text="{Binding Name}" FontSize="22" FontWeight="Bold" Width="350"/>
+                            <Image Source="{Binding Cover}" Height="150"/>
                             <TextBlock Text="{Binding Price}" FontSize="22" Foreground="Red" />
                             <TextBlock Text=" руб." FontSize="22" Foreground="Red" Width="250"/>
                             <TextBlock Text="Рейтинг: " FontSize="22" Foreground="Blue" />

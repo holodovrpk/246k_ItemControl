@@ -24,7 +24,7 @@ namespace _246k_ItemControl
             InitializeComponent();
 
             products.Add(new Product { Name = "Товар 1", Count = 3, 
-                Description = "Офигенный товар 1", Price = 123, Rating = 4, Cover = ""});
+                Description = "Офигенный товар 1", Price = 123, Rating = 4, Cover = @"/Images/cat2.png"});
 
             products.Add(new Product
             {
@@ -33,7 +33,7 @@ namespace _246k_ItemControl
                 Description = "Офигенный товар 2",
                 Price = 5523,
                 Rating = 5,
-                Cover = ""
+                Cover = @"\Images\star.png"
             });
             products.Add(new Product
             {
@@ -42,7 +42,7 @@ namespace _246k_ItemControl
                 Description = "Офигенный товар 3",
                 Price = 823,
                 Rating = 3,
-                Cover = ""
+                Cover = @"\Images\kirp.jpg"
             });
             products.Add(new Product
             {
@@ -51,7 +51,7 @@ namespace _246k_ItemControl
                 Description = "Офигенный товар 4",
                 Price = 454,
                 Rating = 2,
-                Cover = ""
+                Cover = @"\Images\vedro.jpg"
             });
             products.Add(new Product
             {
@@ -60,7 +60,7 @@ namespace _246k_ItemControl
                 Description = "Офигенный товар 5",
                 Price = 2000,
                 Rating = 5,
-                Cover = ""
+                Cover = @"\Images\plitka.jpg"
             });
 
 
